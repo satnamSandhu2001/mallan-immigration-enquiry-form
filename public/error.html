@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      .error-container {
+        text-align: center;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #fa311b;
+      }
+      p {
+        margin-top: 1rem;
+        color: #333;
+      }
+      .back-link {
+        display: inline-block;
+        margin-top: 1rem;
+        color: #3498db;
+        text-decoration: none;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <h1>Something went wrong!</h1>
+      <p id="error-message">
+        We're sorry, but there was an error processing your request.
+      </p>
+      <a href="javascript:history.back()" class="back-link"
+        >Submit form again</a
+      >
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const errorMessage = urlParams.get('message');
+        if (errorMessage) {
+          document.getElementById('error-message').textContent = errorMessage;
+        }
+      });
+    </script>
+  </body>
+</html>

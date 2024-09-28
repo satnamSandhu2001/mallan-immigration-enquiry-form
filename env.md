@@ -1,0 +1,6 @@
+PORT=
+
+SMTP_USER=""
+SMTP_PASS=""
+
+CLIENT_EMAIL=""

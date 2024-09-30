@@ -26,7 +26,7 @@ header {
 }
 
 .logo {
-  max-width: 120px;
+  max-height: 100px;
   margin-bottom: 10px;
 }
 
@@ -208,6 +208,10 @@ label {
 .job input:focus {
   outline: none;
   border: 2px solid rgba(0, 0, 0, 0.484);
+}
+
+.notes {
+  margin-block: 15px;
 }
 
 .form-submit {

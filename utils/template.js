@@ -163,6 +163,9 @@ module.exports = function (data) {
           </tbody>
         </table>
       </div>
+      <div class="row">
+        <label>Notes:</label> <span>${data.notes}</span>
+      </div>
     </div>
   </body>
 </html>
